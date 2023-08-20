@@ -13,7 +13,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "project": "./tsconfig.json"
+    "project": "./NightVision/tsconfig.json"
   },
   "settings": {
     "react": {

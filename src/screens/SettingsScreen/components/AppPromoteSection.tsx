@@ -38,6 +38,7 @@ export function AppPromoteSection() {
     <ListSection headerText={t('appPromote.title')}>
       {apps.map((app) => (
         <ListCell
+          key={app.id}
           style={$recommend}
           bottomSeparator={false}
           onPress={() => {

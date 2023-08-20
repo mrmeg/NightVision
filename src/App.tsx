@@ -6,6 +6,7 @@ import { SafeAreaProvider, initialWindowMetrics } from 'react-native-safe-area-c
 
 import { AppNavigator } from './navigators/AppNavigator';
 import { StoreContext, globalStore } from './store';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 if (__DEV__) {
   DevSettings.addMenuItem('Clear Persisted', () => {
@@ -17,9 +18,11 @@ if (__DEV__) {
 function App(): JSX.Element {
   return (
     <StoreContext.Provider value={globalStore}>
+      <GestureHandlerRootView style={{ flex: 1 }}>
       <SafeAreaProvider initialMetrics={initialWindowMetrics}>
         <AppNavigator />
       </SafeAreaProvider>
+      </GestureHandlerRootView>
     </StoreContext.Provider>
   );
 }

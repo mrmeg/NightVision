@@ -1,13 +1,12 @@
-import { useMemo } from 'react';
-import { Pressable, StatusBar } from 'react-native';
+/* eslint-disable react-native/no-color-literals */
+import { useEffect, useMemo } from 'react';
+import { Alert, Pressable, StatusBar } from 'react-native';
 import { FullWindowOverlay } from 'react-native-screens';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { GestureDetector, Gesture } from 'react-native-gesture-handler';
 
 import { AppStackParamList } from '@/navigators';
 import { HapticFeedback } from '@/utils';
-import { useEffect } from 'react';
-import { Alert } from 'react-native';
 import { observer } from 'mobx-react-lite';
 import { useStore } from '@/store';
 import { t } from '@/locales';
